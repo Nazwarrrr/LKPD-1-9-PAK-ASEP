@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>menampilkan pertambahan dari 1 sampai 10 dan bilangan genap dari 20</title>
+</head>
+<body>
+  <script>
+    let total = 0;
+    for (let i = 1; i <= 10; i++) {
+      total = total + i;
+    }
+
+    document.write("Penjumlahan 1 sampai 10:<br>");
+    document.write("Jumlahnya adalah: " + total + "<br><br>");
+
+    document.write("Bilangan genap dari 2 sampai 20:<br>");
+    for (let i = 1; i <= 20; i++) {
+      if (i % 2 === 0) {
+        document.write(i + "<br>");
+      }
+    }
+      /*1. Kapan lebih cocok memakai for daripada while?
+
+Jika jumlah perulangannya sudah jelas dari awal (misalnya dari 1 sampai 10).
+
+for lebih rapi dipakai untuk perulangan yang punya nilai awal, batas, dan kenaikan yang pasti.
+
+
+2. Apa manfaat perulangan dibanding menulis perintah berulang kali?
+
+Menghemat waktu dan baris kode.
+
+Menghindari kesalahan karena tidak perlu mengetik berulang.
+
+Program jadi lebih rapi, efisien, dan mudah diubah.
+      */
+  </script>
+</body>
+</html>

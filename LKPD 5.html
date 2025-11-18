@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>array tentang Nama teman</title>
+</head>
+<body>
+  <script>
+  document.write("tentang teman" + "<br>")
+  let teman = ['raka', 'dennis', 'nazwar', 'dzakir', 'fadil']
+  let total = 0 ;
+  for (let i = 0 ; i < teman.length ; i++ ) {
+    document.write(teman[i] + "<br>")
+  }
+    document.write("<br><br>" + "tentang nilaii " + "<br>")
+    let nilai = [80,90,95,70,85]
+    for (let i = 0 ; i < nilai.length ; i++) {
+      total += nilai[i]
+    }
+      let Ratarata = total / nilai.length
+      
+      document.write("daftar nilai nya adalah " + nilai + "<br>")
+      document.write("total nilai nya adalah " + total + "<br>")
+      document.write("Rata rata nya adalah " + Ratarata )
+      
+      /*Berikut jawaban singkat, jelas, dan rapat:
+
+
+---
+
+1. Keuntungan menggunakan array dibanding variabel terpisah?
+
+Array membuat data lebih rapi, mudah diolah, dan bisa diakses dengan perulangan, jadi tidak perlu membuat banyak variabel satu per satu.
+
+
+---
+
+2. Cara menambahkan elemen baru ke array?
+
+Menggunakan push():
+
+array.push("elemenBaru");
+
+Contoh:
+
+teman.push("budi");
+      */
+      
+  </script>
+  </body>
+</html>

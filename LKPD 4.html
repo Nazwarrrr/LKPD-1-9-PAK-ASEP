@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>fungsi sapaan dan luas sisi persegi</title>
+</head>
+<body>
+  <script>
+  function sapa(nama) {
+    document.write("halo! " + nama + " selamat datanggg <br><br>")
+  }
+  function luaspersegi(sisi) {
+    return sisi * sisi ;
+  }
+  let namaUser = prompt("siapaa nama muu?")
+  sapa(namaUser)
+  
+  let sisi = prompt("berapa panjang sisi persegi nya?")
+  sisi = Number(sisi)
+  
+  let luas = luaspersegi(sisi)
+  
+  document.write("sisi persegi adalah " + sisi + "<br>")
+  document.write("luas nya adalah " + luas )
+  /*1. Mengapa fungsi membuat kode lebih efisien?
+
+Karena fungsi bisa mengulang kode yang sama tanpa menulis ulang, membuat program lebih singkat, rapi, dan mudah diperbaiki.
+
+
+---
+
+2. Perbedaan parameter dan return?
+
+Parameter = nilai yang dikirim masuk ke fungsi.
+
+Return = nilai yang dikirim keluar dari fungsi sebagai hasil.
+  */
+</script>
+</body>
+</html>

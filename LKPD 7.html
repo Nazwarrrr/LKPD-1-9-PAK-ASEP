@@ -1,0 +1,42 @@
+<doctype! html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tombol sembunyikan paragraf dan oninput teks</title>
+</head>
+<body>
+    <h2>Fitur sembunyikann paragraf</h2>
+
+    <p id="paragraf">1. Perbedaan onclick dan onmouseover
+
+onclick: event yang terjadi saat elemen diklik oleh pengguna.
+
+onmouseover: event yang terjadi saat kursor mouse melewati/menyentuh elemen tanpa perlu klik. <br>
+
+2. Mengapa event penting untuk interaktivitas?
+
+Event penting karena memungkinkan halaman web merespons tindakan pengguna, seperti klik, ketik, atau hover, sehingga website menjadi lebih dinamis, interaktif, dan tidak statis.</p>
+<button onclick="Toggleparagraf()">Sembunyikan / Tampilkan</button>
+<hr>
+
+<h2>Fitur Input Live</h2>
+
+<input type ="text" id ="teks" placeholder="Ketik sesuatu...." oninput="TampilLive()">
+<p id="output"></p>
+<script>
+    function Toggleparagraf() {
+        const p = document.getElementById("paragraf")
+        p.style.display = (p.style.display === "none") ? "block" : "none" ;
+    }
+
+
+    function TampilLive() {
+        const nilai = document.getElementById("teks").value;
+        document.getElementById("output").textContent = nilai ;
+    }
+</script>
+    
+</body>
+</html>

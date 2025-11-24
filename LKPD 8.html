@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Email gampangg</title>
+</head>
+<body>
+    <input type="text" id="nama" placeholder="nama lengkap"><br><br>
+    <input type="email" id="email" placeholder="Email"><br><br>
+    <input type="password" id="password" placeholder="Kata Sandi"><br><br>
+
+    <button onclick="validasi()">Daftar</button>
+
+    <p id="Feedback" style="color: red;font-weight: bold;"></p>
+    <script>
+        function validasi() {
+            let nama = document.getElementById("nama").value ;
+            let email = document.getElementById("email").value;
+            let pass = document.getElementById("password").value;
+
+            let pesan = "" ;
+
+            if (nama === "" || email === "" || pass === "") {
+                pesan = "semua kolom wajib diisi bang"
+            }
+            else if (pass.length < 8) {
+                pesan = "password harus minimal 8 karakternyaa"
+            }
+            else if (!email.includes("@")) {
+                pesan = "Email harus mengandung '@'!"
+            }
+            else {
+                pesan = "pendaftaran berhasillll"
+                document.getElementById("Feedback").style.color = "green" ;
+            }
+            document.getElementById("Feedback").innerHTML=pesan
+        }
+
+        /*1. Mengapa validasi penting sebelum data dikirim ke server?
+
+Memastikan data yang dikirim sesuai format yang diinginkan (misal email ada @, password cukup panjang).
+
+Mengurangi kesalahan input dari pengguna sehingga server menerima data yang bersih dan valid.
+
+Membantu pengalaman pengguna lebih baik karena mendapat feedback langsung sebelum submit.
+
+2. Risiko jika tidak melakukan validasi
+
+Data tidak lengkap atau salah format masuk ke server → bisa menyebabkan error.
+
+Potensi serangan keamanan (misal SQL Injection atau script jahat) jika input tidak diperiksa.
+
+Menyulitkan proses penyimpanan, pengolahan, atau analisis data di server.
+*/
+    </script>
+
+    
+</body>
+</html>
